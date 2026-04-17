@@ -1,31 +1,25 @@
-import React, { useState } from "react";
-import ProductList from "./components/ProductList";
+import React from "react";
 
-function App() {
-  const [showProducts, setShowProducts] = useState(false);
-
-  // 🔹 Handle button click
-  const handleGetStarted = () => {
-    setShowProducts(true);
-  };
-
-  // 🔹 Show Product List after click
-  if (showProducts) {
-    return <ProductList />;
-  }
-
-  // 🔹 Landing Page
+function AboutUs() {
   return (
-    <div style={{ textAlign: "center", padding: "50px" }}>
-      <h1>Paradise Nursery</h1>
-      <p>Welcome to our plant shop 🌿</p>
+    <div className="about-us-container">
+      <h1>About Paradise Nursery</h1>
 
-      {/* 🔥 FIX: onClick added */}
-      <button onClick={handleGetStarted}>
-        Get Started
-      </button>
+      <p>
+        Welcome to Paradise Nursery 🌿, your one-stop destination for beautiful
+        and healthy indoor plants. We are passionate about bringing nature closer
+        to your home by offering a wide variety of plants that enhance your living
+        space and improve air quality.
+      </p>
+
+      <p>
+        Our mission is to provide high-quality plants at affordable prices while
+        promoting a greener and healthier lifestyle. Whether you are a beginner or
+        an experienced plant lover, we have something for everyone. At Paradise
+        Nursery, we believe that every home deserves a touch of nature.
+      </p>
     </div>
   );
 }
 
-export default App;
+export default AboutUs;
